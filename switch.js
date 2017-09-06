@@ -1,3 +1,5 @@
+//Switch Statements
+
 let moonPhase = 'full';
 
 switch(moonPhase) {
@@ -15,6 +17,8 @@ switch(moonPhase) {
     break;
  }
 
+//If, Else if, Else Statements
+
 if (moonPhase === 'full' || isFoggyNight === true) {
   console.log('Howl!');
 } else if (moonPhase === 'mostly full'){
@@ -24,3 +28,17 @@ if (moonPhase === 'full' || isFoggyNight === true) {
 } else {
   console.log('Invalid moon phase');
 }
+
+//Ternary Operator
+let isLocked = false;
+
+isLocked ? console.log('You will need a key to open the door.'):
+console.log('You will not need a key to open the door.');
+
+let isCorrect = true;
+
+isCorrect ? console.log('Correct!'):console.log('Incorrect!');
+
+let favoritePhrase = 'Love That!';
+
+favoritePhrase === 'Love That!' ? console.log('I love that!'): console.log("I don't love that!");
