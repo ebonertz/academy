@@ -1,14 +1,20 @@
 let orderCount = 0;
+
 const takeOrder = (topping, crustType) => {
-  console.log(`Order:${crustType} crust pizza topped with ${topping}`);
-  orderCount ++;
-  }
+  orderCount++;
+  console.log(`Order:${crustType} pizza topped with ${topping}`);
+};
 
-const getSubTotal = (itemCount) => {
-  return (itemCount * 7.5);
-}
+takeOrder('bacon', 'thin crust');
+takeOrder('sausage', 'deep dish');
+takeOrder('pepperoni', 'brooklyn style');
 
-takeOrder('bacon', 'thin');
-takeOrder('sausage', 'deepdish');
-takeOrder('ham', 'pan');
+//Concide body arrow function (removes the parentheses around the single parameter, removed the brackets, remove the return)
+const getSubTotal = itemCount => itemCount * 7.5;
+
+const getTax = () => getSubTotal(orderCount) * 0.06;
+
+const getTotal = () => getSubTotal(orderCount) + getTax();
+
 console.log(getSubTotal(orderCount));
+console.log(getTotal());
