@@ -13,6 +13,11 @@ let person = {
   }
 };
 
+let friend = {
+  name: 'Eric'
+}
+friend.sayHello = person.sayHello;
+
 console.log(person['name']);
 console.log(person['age']);
 
@@ -37,3 +42,4 @@ person.sayHello = () => {
 }
 
 console.log(person.sayHello());
+console.log(friend.sayHello());
