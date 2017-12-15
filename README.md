@@ -1,4 +1,6 @@
-# Control Flow
+# ES6 Overview
+
+## Control Flow
 
 Reference switch.js for code examples
 
@@ -17,6 +19,7 @@ One equals symbol (=) is used to assign a value to a variable.
 Three equals symbols (===) are used to check if two variables are equal to each other.
 
 
+## Mapping
 Reference citymap.js for code examples
 .forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.
 .map() executes the same code on every element in an array and returns a new array with the updated elements.
@@ -25,9 +28,8 @@ All iterator methods can be written using arrow function syntax. In fact, given 
 You can visit the Mozilla Developer Network to learn more about iterator methods (and all other parts of JavaScript!).
 Additional iterator methods such as .some(), .every(), .reduce() perform different functions.
 
-ES6
 
-JavaScript Types
+## JavaScript Types
 BOSSNUN
 Boolean
 Object
@@ -64,7 +66,7 @@ class SponsorWidget {
 }
 
 
-ES6 module
+##ES6 Modules
 naming syntax
 Avoids polluting the global namespace
 export keyword exposes function to the module system
@@ -99,7 +101,7 @@ Impure Functions
 Side Effects- When a function or expression modifies state outside its own context
 
 
-Maps
+##Maps
 
 Maps are a data structure composed of a collection of key/value pairs. They are very useful to store simple data such as property values
 Each key is linked to one value
@@ -209,7 +211,7 @@ user[Symbol.iterator] = function(){
   return { next };
 };
 
-Generators
+## Generators
 New type of function added to JS to make it easier to work with Iterators
 Generator functions are special functions from which we can use the  yield keyword to return iterator objects.
 Generator functions are create with function *nameOfFunction()
@@ -328,7 +330,7 @@ Scope refers to where a variable can be accessed in a program. While some varia
 
 Block scope is a powerful tool in JavaScript, since it allows us to define variables with precision, and not pollute the global namespace.
 
-Arrays
+## Arrays
 
 * 		Arrays are lists and are a way to store data in JavaScript.
 * 		Arrays are created with brackets [].
@@ -345,7 +347,7 @@ Variables that are assigned with const cannot be reassigned. However, arrays t
 This means that we can change the contents of an array, but cannot reassign the variable name to a new array or other data type.
 The instructions below will illustrate this more clearly. Pay close attention to the similarities and differences between the condiments array and the utensils array as you complete the steps.
 
-Loops
+## Loops
 for loops require a start condition, a stop condition, and an iterator. The iterator should bring the loop from the start condition to the stop condition.
 
 * 		for loops allow us to repeat a block of code a known amount of times.
@@ -388,7 +390,7 @@ let smallNumbers = randomNumbers.filter(num => num < 250);
 
 let interestingWords = words.filter(word => word.length > 5);
 
-Objects
+## Objects
 JavaScript objects are containers that can store data and functions. The data we store in an object is not ordered — we can only access it by calling its associated key.
 
 Let's consider the above example one step at a time:
@@ -428,10 +430,9 @@ Developers use an underscore before a property name to indicate a property or va
 
 Once you've set the properties, you need a way to access them. Getters are used to get the property values inside of an object.
 
-#Objects Summary
-* 		Objects store key-value pairs and let us represent real-world things in JavaScript.
-* 		Properties in objects are separated by commas. Key-value pairs are always separated by a colon.
-* 		You can add or edit a property within an object with dot notation.
-* 		A method is a function in an object.
-* 		this helps us with scope inside of object methods. this is a dynamic variable that can change depending on the object that is calling the method.
-* 		Getter and setter methods allow you to process data before accessing or setting property values.
+# Objects Summary
+Objects store key-value pairs and let us represent real-world things in JavaScript.
+Properties in objects are separated by commas. Key-value pairs are always separated by a colon.
+A method is a function in an object.
+This helps us with scope inside of object methods. this is a dynamic variable that can change depending on the object that is calling the method.
+Getter and setter methods allow you to process data before accessing or setting property values.
