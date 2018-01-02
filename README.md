@@ -1,5 +1,15 @@
 # ES6 Overview
 
+## JavaScript Types
+  **BOSSNUN**
+* Boolean
+* Object
+* String
+* Symbol
+* Number
+* Undefined
+* Null
+
 ## Control Flow
 
 * if/else statements make binary decisions and execute different code based on conditions.
@@ -18,6 +28,17 @@
 
 Reference switch.js for code examples
 
+## Falsey Values
+
+All variables that have been created and set are truthy (and will evaluate to true if they are the condition of a control flow statement) unless they contain one of the seven values listed below:
+
+* false
+* 0 and -0
+* "" and '' (empty strings)
+* null
+* undefined
+* NaN (Not a Number)
+
 ## Mapping
 
 * .forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.
@@ -29,29 +50,19 @@ Reference switch.js for code examples
 
 Reference citymap.js for code examples
 
-## JavaScript Types
-* BOSSNUN
-* Boolean
-* Object
-* String
-* Symbol
-* Number
-* Undefined
-* Null
 
-
-###Class Syntax
+### Class Syntax
 Object Oriented
 To define a class use a class keyword follower by the name of the class. The body of the class is the part between the curly braces
 Instance method definitions in classes look just like method initializer shorthand in objects
 
-###Constructor method
+### Constructor method
 Runs every time a new instance is created with a new operator.  
 Inside the contractor method is a good place to assign to instance variables that we want to use in other instance methods.
 Properties or instances variables et in the contractor method can be accessed from all other instance methods in the class.
 Class inheritance - Reduces Code repetition  
 
-###Using Class Syntax
+### Using Class Syntax
 
 ```javascript
 
@@ -118,6 +129,7 @@ Weak Map - Only objects can be used as keys (string, number and booleans not all
 Weak Maps are not iterable
 
 Add Entries to a Map Object
+```
 let author1 = { name: "Sam" };
 let author2 = { name: "Tyler" };
 
@@ -129,8 +141,10 @@ console.log( `Total Replies: ${totalReplies.get(author2)}` );
 totalReplies.set( author1, 42);
 totalReplies.set( author2, 15);
 
-Iterating maps with for.. of loop and array restructuring
+```
 
+Iterating maps with for.. of loop and array restructuring
+```
 let recentPosts = new Map();
 
 recentPosts.set( "Sam", "ES2015" );
@@ -140,8 +154,9 @@ recentPosts.set( "Brook",  "TypeScript" );
 for(let [user, postTitle] of recentPosts){
   console.log(`${user} = ${postTitle}`);
 }
+```
 
-Sets
+## Sets
 Limitations of Arrays
 Don’t enforce uniqueness of items. Duplicate entries are allowed.
 
@@ -185,12 +200,12 @@ export default function getReplies(topicId){
   });
 }
 
-Iterables
+## Iterables
 Return an iterator object. This object know how to access items from a collection 1 at a time, while keeping track of its position in the sequence
 For of is a use of an iterator object
 Each time you call next() it returns an object with 2 specific properties. done and value;
 Done is a boolean  Value is set to the value returned by the iterator
-
+```
 let user = {
   name: "sam", totalReplies: 17, isBlocked: false
 };
@@ -212,6 +227,7 @@ user[Symbol.iterator] = function(){
   };
   return { next };
 };
+```
 
 ## Generators
 New type of function added to JS to make it easier to work with Iterators
@@ -222,6 +238,7 @@ Generator functions return objects that provide the same next method expected by
 
 Each time we call tied, our function returns a new iterator object and then pauses until its called again
 
+```
 function *topicList(){
   yield "ES2015";
   yield "Semi-colons: good or bad?";
@@ -232,7 +249,6 @@ for( let topic of topicList() ){
   console.log( topic );
 }
 
-///
 
 let user = {
   name: "sam", totalReplies: 17, isBlocked: false
@@ -252,58 +268,51 @@ user[Symbol.iterator] = function * (){
 for(let p of user){
   console.log( p );
 }
+```
 
-
- Codecademy
-JS Basics
 Primitive data types
 String, number, boolean, null
 Null represents the absence of a value
 When you introduce a new piece of data into a JavaScript program, the browser saves it as an instance of the data type. An instance is an individual case (or object) of a data type. You can retrieve property information by appending the string with a period and the property name:
-While the length of a string is calculated when an instance is created, a string instance also has methods that calculate new information as needed. When these built-in methods are called on an instance, they perform actions that generate an output.
+While the length of a string is calculated when an instance is created, a string instance also has methods that calculate new information as needed. When these built-in methods are called on an instance, they perform actions that generate an output.  
+
 Built in Methods
 .toUpperCase()
 .startsWith()
 .trim()
 Math.random()
+
+```
 console.log(Math.floor(Math.random() * 100));  
 console.log(Math.ceil(43.8));   ==> 44
 console.log(Number.isInteger(2017)); ==> true
+```
 
-Variables
+### Variables
 constant variable - create a new variable with a value that cannot change
 = assigns a value to the constant
 Undefined is the fish final primitive data type
 JS assigned the undefined data type to variables that are not assigned a value
 See maff repl.it
 
-String Interpolation
+### String Interpolation
 The JavaScript term for inserting the data saved to a variable into a string is string interpolation.
 In the newest version of JavaScript (ES6) we can insert variables into strings with ease, by doing two things:
 Instead of using quotes around the string, use backticks (this key is usually located on the top of your keyboard, left of the 1 key).
-Wrap your variable with ${myVariable}, followed by a sentence. No +s necessary.
-
+Wrap your variable with ${myVariable}, followed by a sentence. No +s necessary.  
+```
 let myName = 'Evan';
 let myCity = 'Durham';
 console.log(`My name is ${myName}. My favorite city is ${myCity}`);
+```
 
-Control Flow
-Falsy Values
-All variables that have been created and set are truthy (and will evaluate to true if they are the condition of a control flow statement) unless they contain one of the seven values listed below:
-* 		false
-* 		0 and -0
-* 		"" and '' (empty strings)
-* 		null
-* 		undefined
-* 		NaN (Not a Number)
-* 		document.all (something you will rarely encounter)
 
 There are two more useful comparisons we can make. Often, we might want to check if two things are equal to each other or if they are not.
 * To check if two things equal each other, we write === (three = signs in a row).
 * To check if two things do not equal each other, we write !== (an exclamation with two = signs in a row).
 It can be confusing when to use one = sign and when to use three ===signs. Use a single = to assign a value to a variable. Use ===to compare the values of two different variables.
 
-logical operators.
+### Logical Operators
 * To say "both must be true," we use &&.
 * To say "either can be true," we use ||.
 
@@ -325,7 +334,7 @@ takeOrder('mushrooms');
 Using return is generally a best practice when writing functions, as it makes your code more maintainable and flexible.
 
 
-Concise body arrow functions
+## Concise body arrow functions
 * Functions that take a single parameter should not use parentheses. The code will still work, but it's better practice to omit the parentheses around single parameters. However, if a function takes zero or multiple parameters, parentheses are required.
 * A function composed of a sole single-line block is automatically returned. The contents of the block should immediately follow the arrow => and the return keyword can be removed. This is referred to as implicit return.
 * A function composed of a sole single-line block does not need brackets.
@@ -424,7 +433,7 @@ console.log(person['age']);
 ```
 
 Objects are considered mutable, which means you can change them after they're created.
- ven if you save an object to a const variable, you can still add to and edit the key-value pairs inside of it without causing an error.
+Even if you save an object to a const variable, you can still add to and edit the key-value pairs inside of it without causing an error.
 
 When objects have key-function pairs, we call the function a method.
 
