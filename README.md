@@ -2,58 +2,58 @@
 
 ## Control Flow
 
+* if/else statements make binary decisions and execute different code based on conditions.
+* All conditions are evaluated to be truthy or falsy.
+* We can add more conditional statements to if/else statements with else if.
+* Switch statements make complicated if/else statements easier to read and achieve the same result.
+* The ternary operator (?) and a colon (:) allow us to refactor simple if/else statements.
+* Comparison operators, including <, >, <=, and >= can compare two variables or values.
+* After two values are compared, the conditional statement evaluates to true or false.
+* The logical operator && checks if both sides of a condition are truthy.
+* The logical operator || checks if either side is truthy.
+* The logical operator !== checks if the two sides are not equal.
+* An exclamation mark (!) switches the truthiness / falsiness of the value of a variable.
+* One equals symbol (=) is used to assign a value to a variable.
+* Three equals symbols (===) are used to check if two variables are equal to each other.
+
 Reference switch.js for code examples
 
-if/else statements make binary decisions and execute different code based on conditions.
-All conditions are evaluated to be truthy or falsy.
-We can add more conditional statements to if/else statements with else if.
-switch statements make complicated if/else statements easier to read and achieve the same result.
-The ternary operator (?) and a colon (:) allow us to refactor simple if/else statements.
-Comparison operators, including <, >, <=, and >= can compare two variables or values.
-After two values are compared, the conditional statement evaluates to true or false.
-The logical operator && checks if both sides of a condition are truthy.
-The logical operator || checks if either side is truthy.
-The logical operator !== checks if the two sides are not equal.
-An exclamation mark (!) switches the truthiness / falsiness of the value of a variable.
-One equals symbol (=) is used to assign a value to a variable.
-Three equals symbols (===) are used to check if two variables are equal to each other.
-
-
 ## Mapping
-Reference citymap.js for code examples
-.forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.
-.map() executes the same code on every element in an array and returns a new array with the updated elements.
-.filter() checks every element in an array to see if it meets certain criteria and returns a new array with the elements that return truthy for the criteria.
-All iterator methods can be written using arrow function syntax. In fact, given the succinctness and the implicit return of arrow function syntax, this is quickly becoming the preferred way to write these types of method calls.
-You can visit the Mozilla Developer Network to learn more about iterator methods (and all other parts of JavaScript!).
-Additional iterator methods such as .some(), .every(), .reduce() perform different functions.
 
+* .forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.
+* .map() executes the same code on every element in an array and returns a new array with the updated elements.
+* .filter() checks every element in an array to see if it meets certain criteria and returns a new array with the elements that return truthy for the criteria.
+* All iterator methods can be written using arrow function syntax. In fact, given the succinctness and the implicit return of arrow function syntax, this is quickly becoming the preferred way to write these types of method calls.
+
+* Additional iterator methods such as .some(), .every(), .reduce() perform different functions.
+
+Reference citymap.js for code examples
 
 ## JavaScript Types
-BOSSNUN
-Boolean
-Object
-String
-Symbol
-Number
-Undefined
-Null
+* BOSSNUN
+* Boolean
+* Object
+* String
+* Symbol
+* Number
+* Undefined
+* Null
 
 
-Class Syntax
+###Class Syntax
 Object Oriented
 To define a class use a class keyword follower by the name of the class. The body of the class is the part between the curly braces
 Instance method definitions in classes look just like method initializer shorthand in objects
 
-Constructor method
-Runs every time a new instance is created with a new operator.
+###Constructor method
+Runs every time a new instance is created with a new operator.  
 Inside the contractor method is a good place to assign to instance variables that we want to use in other instance methods.
 Properties or instances variables et in the contractor method can be accessed from all other instance methods in the class.
-Class inheritance - Reduces Code repetition
+Class inheritance - Reduces Code repetition  
 
+###Using Class Syntax
 
-Using Class Syntax
-Object oriented code
+```javascript
 
 class SponsorWidget {
 
@@ -64,28 +64,30 @@ class SponsorWidget {
 	render() {
   }
 }
+```
 
+## ES6 Modules
+* Avoids polluting the global namespace
+* Export keyword exposes function to the module system
 
-##ES6 Modules
-naming syntax
-Avoids polluting the global namespace
-export keyword exposes function to the module system
-use the default type export.
-Simplest way to export a function
-import keyword
-
-To import multiple functions for a sign module
+To import multiple functions for a sign module  
+```
 import { alertMessage, logMessage } from ‘./flash-message’;
+```
 
 Import the entire module as an object
+```
 import * as flash from ‘./flash-message’ ;
+```
 
 Export multiple functions as an object
+```
 export { alertMessage, logMessage}
+```
 
 Modules Part 2
 you cannot redefine constants within the same scope
-Exporting contants in a module
+Exporting constants in a module
 Import the constants into another module
 Export class modules with default export
 But create a new instance of the using new
@@ -101,7 +103,7 @@ Impure Functions
 Side Effects- When a function or expression modifies state outside its own context
 
 
-##Maps
+## Maps
 
 Maps are a data structure composed of a collection of key/value pairs. They are very useful to store simple data such as property values
 Each key is linked to one value
@@ -307,16 +309,19 @@ logical operators.
 
 To deal with times when you need many else if conditions, we can turn to a switch statement to write more concise and readable code.
 
-Functions
+## Functions
 Arguments are provided when you call a function, and parameters receive arguments as their value.
 When we set a value as the argument we pass a value to the function. the parameter here is topping. The argument is mushrooms
 
+```javascript
 const takeOrder = (topping) => {
   console.log(`Order:pizza topped with ${topping}`);
 }
 takeOrder('mushrooms');
 
-Return
+```
+
+## Return
 Using return is generally a best practice when writing functions, as it makes your code more maintainable and flexible.
 
 
@@ -325,21 +330,21 @@ Concise body arrow functions
 * A function composed of a sole single-line block is automatically returned. The contents of the block should immediately follow the arrow => and the return keyword can be removed. This is referred to as implicit return.
 * A function composed of a sole single-line block does not need brackets.
 
-Scope
+## Scope
 Scope refers to where a variable can be accessed in a program. While some variables can be accessed from anywhere within a program, other variables may only be available in a specific context. Scope depends entirely on where a variable is declared.
 
 Block scope is a powerful tool in JavaScript, since it allows us to define variables with precision, and not pollute the global namespace.
 
 ## Arrays
 
-* 		Arrays are lists and are a way to store data in JavaScript.
-* 		Arrays are created with brackets [].
-* 		Each item inside of an array is at a numbered position, starting at 0.
-* 		We can access one item in an array using its numbered position, with syntax like: myArray[0].
-* 		We can also change an item in an array using its numbered position, with syntax like myArray[0] = "new string";
-* 		Arrays have a length property, which allows you to see how many items are in an array.
-* 		Arrays have their own methods, including .push() and .pop(), which add and remove items from an array, respectively.
-* 		Arrays have many other methods that perform different functions, such as .slice() and .shift(). You can read the documentation for any array method on the Mozilla Developer Network website.
+* Arrays are lists and are a way to store data in JavaScript.
+* Arrays are created with brackets [].
+* Each item inside of an array is at a numbered position, starting at 0.
+* We can access one item in an array using its numbered position, with syntax like: myArray[0].
+* We can also change an item in an array using its numbered position, with syntax like myArray[0] = "new string";
+* Arrays have a length property, which allows you to see how many items are in an array.
+* Arrays have their own methods, including .push() and .pop(), which add and remove items from an array, respectively.
+* Arrays have many other methods that perform different functions, such as .slice() and .shift(). You can read the documentation for any array method on the Mozilla Developer Network website.
 
 
 You may recall that you can declare variables with both the let and const keywords. Variables declared with let can be reassigned.
@@ -350,14 +355,14 @@ The instructions below will illustrate this more clearly. Pay close attention to
 ## Loops
 for loops require a start condition, a stop condition, and an iterator. The iterator should bring the loop from the start condition to the stop condition.
 
-* 		for loops allow us to repeat a block of code a known amount of times.
-* 		We can use a for loop inside another for loop to compare two lists.
-* 		while loops are for looping over a code block an unknown amount of times.
-* 		Infinite loops occur when stop conditions are never met.
+* for loops allow us to repeat a block of code a known amount of times.
+* We can use a for loop inside another for loop to compare two lists.
+* while loops are for looping over a code block an unknown amount of times.
+* Infinite loops occur when stop conditions are never met.
 
 
-Iterators
-ForEach()
+## Iterators
+ForEach()  
 groceries.forEach(groceryItem => console.log(' - ' + groceryItem));
 fruits.forEach(frutas => console.log('I want to eat a ' + frutas));
 It is an array method. It must be called upon an array.
@@ -365,6 +370,7 @@ It is an array method. It must be called upon an array.
 The syntax for .map() is almost the same as the syntax for .forEach(), with one important change. Notice that directly before the function call, the code reads, let bigNumbers =. This is because .map() returns a new array with elements that have been modified by the code in its block. bigNumbers is the new array in which the method will save the values.
 .map() can also be written with arrow function syntax.
 
+```
 let animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich', 'Whale', 'octopus', 'rabbit', 'lion', 'dog'];
 
 // Create the secretMessage array below
@@ -389,6 +395,7 @@ randomNumbers.filter(function(number) {
 let smallNumbers = randomNumbers.filter(num => num < 250);
 
 let interestingWords = words.filter(word => word.length > 5);
+```
 
 ## Objects
 JavaScript objects are containers that can store data and functions. The data we store in an object is not ordered — we can only access it by calling its associated key.
@@ -406,6 +413,7 @@ Another way to access a key's value is with bracket notation.
 
 Bracket notation outputs the same value as dot notation. You may see either of these techniques used in JavaScript programs, so it's good to be familiar with both. One advantage that bracket notation has over dot notation is that you can use variables inside the brackets to select the keys of an object.
 
+```
 let person = {
   name: 'Evan',
   age: 28
@@ -413,9 +421,10 @@ let person = {
 
 console.log(person['name']);
 console.log(person['age']);
+```
 
 Objects are considered mutable, which means you can change them after they're created.
- Even if you save an object to a const variable, you can still add to and edit the key-value pairs inside of it without causing an error.
+ ven if you save an object to a const variable, you can still add to and edit the key-value pairs inside of it without causing an error.
 
 When objects have key-function pairs, we call the function a method.
 
@@ -430,7 +439,7 @@ Developers use an underscore before a property name to indicate a property or va
 
 Once you've set the properties, you need a way to access them. Getters are used to get the property values inside of an object.
 
-# Objects Summary
+## Objects Summary
 Objects store key-value pairs and let us represent real-world things in JavaScript.
 Properties in objects are separated by commas. Key-value pairs are always separated by a colon.
 A method is a function in an object.
