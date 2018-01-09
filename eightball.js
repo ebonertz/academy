@@ -1,5 +1,5 @@
 //Define username
-let userName = '';
+let userName = 'Aaron';
 
 //Create a ternary expression that decided what to do if the user enters a name or not
 userName.length > 0 ? console.log(`Hello, ${userName}`) : console.log('Hello!');
@@ -13,11 +13,11 @@ userName.length > 0 ? console.log(`Hello, ${userName}`) : console.log('Hello!');
 
 
 // Create a variable that is a string that is the question the user wants to ask
-let userQuestion = 'Will 2018 be a great year?';
+let userQuestion = 'Will the Dawgs win?';
 
 // Create a variable that will generate a random number between 0 and 7
 let randomNumber = Math.floor(Math.random()*8);
-console.log(`Random generated number is: ${randomNumber}`);
+// console.log(`Random generated number is: ${randomNumber}`);
 
 // Create the eightBall variable and set to an empty string
 let eightBall = '';
@@ -54,5 +54,5 @@ switch(randomNumber) {
   }
 
 // Log the userQuestion and the eightBall response
-console.log(userName + ' asked: ' + userQuestion);
+console.log('You asked: ' + userQuestion);
 console.log('The eight ball answered: ' + eightBall);
