@@ -81,38 +81,35 @@ class SponsorWidget {
 * Avoids polluting the global namespace
 * Export keyword exposes function to the module system
 
-To import multiple functions for a sign module  
-```
+To import multiple functions for a sign module
+
+```javascript
 import { alertMessage, logMessage } from ‘./flash-message’;
 ```
 
 Import the entire module as an object
-```
+```javascript
 import * as flash from ‘./flash-message’ ;
 ```
 
 Export multiple functions as an object
-```
+```javascript
 export { alertMessage, logMessage}
 ```
 
-Modules Part 2
+## Modules Part 2
 you cannot redefine constants within the same scope
 Exporting constants in a module
 Import the constants into another module
 Export class modules with default export
 But create a new instance of the using new
 
-Pure Functions
+## Pure Functions
 return value is determined only by its input values (arguments). When given the same argument, the result will always be the same.
 - must take arguments
 - rely only on local state and do not mutate external state
 - do not produce side effects
 - cannot call impure functions
-Impure Functions
-
-Side Effects- When a function or expression modifies state outside its own context
-
 
 ## Maps
 
@@ -129,7 +126,8 @@ Weak Map - Only objects can be used as keys (string, number and booleans not all
 Weak Maps are not iterable
 
 Add Entries to a Map Object
-```
+
+```javascript
 let author1 = { name: "Sam" };
 let author2 = { name: "Tyler" };
 
@@ -144,7 +142,7 @@ totalReplies.set( author2, 15);
 ```
 
 Iterating maps with for.. of loop and array restructuring
-```
+```javascript
 let recentPosts = new Map();
 
 recentPosts.set( "Sam", "ES2015" );
@@ -165,7 +163,7 @@ Use the add method to add elements to a set
 Duplicate entires are ignored
 Set objects are iterable so you can use them with for..or and restructuring
 
-What is Gulp
+What is Gulp?
 A build system. A toolkit to automate time consuming tasks
 Compile code, run task, compile sass
 Bundling source files into a single destination file
@@ -173,7 +171,7 @@ To use gulp you must have node installed
 Install gulp globally
 Uses the api from the gulpfile
 
-Promises, Iterators and Generators
+## Promises, Iterators and Generators
 Alternative to callback based code
 In order to avoid blocking the main thread of execution, we write non-blocking code
 Continuation passing style.
@@ -186,6 +184,7 @@ A promise represents a future value
 Resolving a promise.
 Use .then method to read results. Takes a callback function which will only be invoked once the Promise is resolved.
 
+```javascript
 export default function getReplies(topicId){
   return new Promise(function(resolve, reject){
     _getRepliesForTopic(topicId, function(data){
@@ -199,13 +198,15 @@ export default function getReplies(topicId){
     });
   });
 }
+```
 
 ## Iterables
 Return an iterator object. This object know how to access items from a collection 1 at a time, while keeping track of its position in the sequence
 For of is a use of an iterator object
 Each time you call next() it returns an object with 2 specific properties. done and value;
 Done is a boolean  Value is set to the value returned by the iterator
-```
+
+```javascript
 let user = {
   name: "sam", totalReplies: 17, isBlocked: false
 };
@@ -230,6 +231,7 @@ user[Symbol.iterator] = function(){
 ```
 
 ## Generators
+
 New type of function added to JS to make it easier to work with Iterators
 Generator functions are special functions from which we can use the  yield keyword to return iterator objects.
 Generator functions are create with function *nameOfFunction()
@@ -238,7 +240,6 @@ Generator functions return objects that provide the same next method expected by
 
 Each time we call tied, our function returns a new iterator object and then pauses until its called again
 
-```
 function *topicList(){
   yield "ES2015";
   yield "Semi-colons: good or bad?";
@@ -268,9 +269,8 @@ user[Symbol.iterator] = function * (){
 for(let p of user){
   console.log( p );
 }
-```
 
-Primitive data types
+## Primitive data types
 String, number, boolean, null
 Null represents the absence of a value
 When you introduce a new piece of data into a JavaScript program, the browser saves it as an instance of the data type. An instance is an individual case (or object) of a data type. You can retrieve property information by appending the string with a period and the property name:
@@ -355,6 +355,15 @@ Block scope is a powerful tool in JavaScript, since it allows us to define varia
 * Arrays have their own methods, including .push() and .pop(), which add and remove items from an array, respectively.
 * Arrays have many other methods that perform different functions, such as .slice() and .shift(). You can read the documentation for any array method on the Mozilla Developer Network website.
 
+### Built in Methods
+.shift() - Removes the first index
+.unshift() - Removes the last index
+.pop() - Removes the last
+.push() - Adds to end of the array
+.splice(indexToStart, numberOfIndices, 'stringToAdd') - Removes a range of indexes and Replaces
+.slice(begin, end) - Cuts certain indexes as defined
+
+
 
 You may recall that you can declare variables with both the let and const keywords. Variables declared with let can be reassigned.
 Variables that are assigned with const cannot be reassigned. However, arrays that are declared with const remain mutable, or changeable.
@@ -367,6 +376,7 @@ for loops require a start condition, a stop condition, and an iterator. The ite
 * for loops allow us to repeat a block of code a known amount of times.
 * We can use a for loop inside another for loop to compare two lists.
 * while loops are for looping over a code block an unknown amount of times.
+* while loops run an infinite amount of times as long as their condition remains true.
 * Infinite loops occur when stop conditions are never met.
 
 
