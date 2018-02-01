@@ -4,7 +4,7 @@ secretMessage.pop(); //Removes the last string
 secretMessage.push('to', 'Program'); //Adds string to array
 secretMessage[7] = 'right'; // Replaces string at index 7
 secretMessage.shift(); // Removes the first string
-secretMessage.unshift('Programming');
+secretMessage.unshift('Programming'); // Removes the last string
 
 secretMessage.splice(6,5, 'know'); //.splice(indexToStart, numberOfIndices, 'stringToAdd')
 
