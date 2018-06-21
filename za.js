@@ -9,7 +9,7 @@ takeOrder('bacon', 'thin crust');
 takeOrder('sausage', 'deep dish');
 takeOrder('pepperoni', 'brooklyn style');
 
-//Concide body arrow function (removes the parentheses around the single parameter, removed the brackets, remove the return)
+//Concise body arrow function (removes the parentheses around the single parameter, removed the brackets, remove the return)
 const getSubTotal = itemCount => itemCount * 7.5;
 
 const getTax = () => getSubTotal(orderCount) * 0.06;
