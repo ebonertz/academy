@@ -204,7 +204,7 @@ export default function getReplies(topicId){
 Return an iterator object. This object know how to access items from a collection 1 at a time, while keeping track of its position in the sequence
 For of is a use of an iterator object
 Each time you call next() it returns an object with 2 specific properties. done and value;
-Done is a boolean  Value is set to the value returned by the iterator
+Done is a boolean Value is set to the value returned by the iterator
 
 ```javascript
 let user = {
@@ -465,6 +465,7 @@ A method is a function in an object.
 This helps us with scope inside of object methods. this is a dynamic variable that can change depending on the object that is calling the method.
 Getter and setter methods allow you to process data before accessing or setting property values.
 
+<<<<<<< HEAD
 Classes
 JavaScript is an object-oriented programming (OOP) language we can use to model real-world items.
 Classes are a tool that developers use to quickly produce similar objects. Serves as a template to create a new object
@@ -493,3 +494,22 @@ class SponsorWidget {
 	render() {
   }
 }
+
+## Modules
+```javascript
+let Menu = {};
+Menu.specialty = "Roasted Beet Burger with Mint Sauce";
+
+module.exports = Menu;
+```
+
+let Menu = {}; creates the object that represents the module Menu. The statement contains an uppercase variable named Menu which is set equal to an object.
+Menu.specialty is defined as a property of the Menu module. We add data to the Menu object by setting properties on that object, and giving the properties a value.
+"Roasted Beet Burger with Mint Sauce"; is the value stored in the Menu.specialty property.
+module.exports = Menu; exports the Menu object as a module. module is a variable that represents the module, and exports exposes the module as an object.
+The pattern we use to export modules is thus:
+
+Define an object to represent the module.
+Add data or behavior to the module.
+Export the module.
+Let's create our first module.
