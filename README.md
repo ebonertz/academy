@@ -465,8 +465,7 @@ A method is a function in an object.
 This helps us with scope inside of object methods. this is a dynamic variable that can change depending on the object that is calling the method.
 Getter and setter methods allow you to process data before accessing or setting property values.
 
-<<<<<<< HEAD
-Classes
+## Classes
 JavaScript is an object-oriented programming (OOP) language we can use to model real-world items.
 Classes are a tool that developers use to quickly produce similar objects. Serves as a template to create a new object
 JavaScript calls the constructor() method every time it creates a new instance of a class.
@@ -477,7 +476,7 @@ The subclass inherits all of the parent's getters, setters, and methods. You can
 The super keyword is used in subclasses to call a parent constructor
 Super accepts arguments for the parent constructor()s parameters.
 
-Constructor method
+##Constructor method
 Runs every time a new instance is created with a new operator.
 Inside the contractor method is a good place to assign to instance variables that we want to use in other instance methods.
 Properties or instances variables et in the contractor method can be accessed from all other instance methods in the class.
